@@ -1,0 +1,383 @@
+.form {
+  padding-bottom: 64px;
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.form__fieldset {
+  padding: 0 20px 32px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0px 0px 8px rgba(0, 51, 91, 0.02);
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  z-index: 2;
+  margin-bottom: 23px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    box-shadow: 0px 0px 8px rgba(0, 51, 91, 0.02);
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    width: 100%;
+    z-index: -1;
+    height: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 64px;
+
+    &::before {
+      height: 75px;
+    }
+
+    &:nth-child(4) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.form__fieldset-title {
+  margin-left: 20px;
+  display: flex;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.87);
+  padding-top: 24px;
+  width: 294px;
+  margin-bottom: 32px;
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.form__fieldset-title span {
+  display: block;
+  color: #3FA6F6;
+  margin-right: 7px;
+}
+
+.form__fieldset:last-of-type {
+  margin-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 48px;
+  }
+}
+
+.form__label {
+  padding-left: 56px;
+  position: relative;
+  line-height: 18px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: rgba(0, 0, 0, 0.6);
+
+  @media (min-width: $desktop-width) {
+    padding-left: 68px;
+  }
+}
+
+.form__label--for-file {
+  background-image: url("/img/pic-logo.svg");
+  background-repeat: no-repeat;
+  background-position: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #028AF3;
+
+  @media (min-width: $desktop-width) {
+    background-position: 25px 4px;
+    height: 24px;
+  }
+}
+
+.form__label--for-geo:not(:last-child) {
+  background-image: url("/img/location_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 20px;
+  margin-bottom: 27px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #028AF3;
+
+  @media (min-width: $desktop-width) {
+    background-position: 30px;
+    margin-right: 90px;
+  }
+}
+
+.form__label--for-text-input {
+  padding-left: 0;
+}
+
+.form__label:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.form__label--for-checkbox {
+  width: 270px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: rgba(0, 0, 0, 0.6);
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.form__radio {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  left: 20px;
+  top: 0;
+
+  @media (min-width: $desktop-width) {
+    left: 30px;
+  }
+}
+
+.form__fieldset:last-child {
+  margin-bottom: 40px;
+}
+
+.form__fieldset:nth-child(1)::before {
+  top: -106px;
+}
+
+.form__fieldset:nth-child(2)::before {
+  top: -77px;
+
+  @media (min-width: $desktop-width) {
+    top: -102px;
+  }
+}
+
+.form__fieldset:nth-child(3)::before {
+  top: -77px;
+
+  @media (min-width: $desktop-width) {
+    top: -95px
+  }
+}
+
+.form__fieldset:nth-child(4)::before {
+  top: -100px;
+}
+
+.form__fieldset:nth-child(5)::before {
+  top: -95px;
+
+  @media (min-width: $desktop-width) {
+    top: 82px;
+  }
+}
+
+.form__button {
+  width: 325px;
+  min-height: 52px;
+  background-color: rgba(2, 138, 243, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 2px 4px rgba(2, 73, 129, 0.04);
+  border-radius: 28px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #028AF3;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  @media (min-width: $desktop-width) {
+    width: 176px;
+    min-height: 56px;
+  }
+}
+
+.form__text {
+  background-color: rgba(2, 138, 243, 0.06);
+  border-radius: 8px;
+  border: none;
+  margin-left: 20px;
+  box-sizing: border-box;
+  width: 320px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: rgba(0, 0, 0, 0.4);
+
+  @media (min-width: $desktop-width) {
+    width: 388px;
+  }
+}
+
+.form__text--textarea {
+  height: 96px;
+  padding: 14px 0 0 14px;
+  resize: none;
+}
+
+.form__text--input {
+  padding: 0 0 0 14px;
+  height: 48px;
+}
+
+.form__checkbox {
+  position: absolute;
+  left: 20px;
+  width: 21px;
+  height: 21px;
+  top: 0;
+}
+
+.form__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.form__label br {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.form__fieldset-title--for-text {
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+  }
+}
+
+.form__personal-data-link {
+  color: #028AF3;
+}
+
+.form__label--for-textarea {
+  padding: 0;
+}
+
+.form__pristine-error {
+  display: block;
+  color: red;
+  position: absolute;
+  width: 320px;
+  left: 22px;
+  bottom: -25px;
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+  }
+}
+
+.form__checkbox + .form__pristine-error,
+.form__file-input + .form__pristine-error {
+  bottom: -45px;
+
+  @media (min-width: $desktop-width) {
+    bottom: -25px;
+  }
+}
+
+.success,
+.error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  padding-top: 300px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.success__message,
+.error__message {
+  position: relative;
+
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.success__message::before,
+.error__message::before {
+  content: "";
+  position: absolute;
+
+  top: -150px;
+  left: 50%;
+
+  width: 109px;
+  height: 122px;
+
+  background-image: url("../img/muffin-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.error__message::before {
+  background-image: url("../img/muffin-red.svg");
+}
+
+.error__button {
+  padding: 10px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+
+  color: white;
+  border: 4px solid #ff5635;
+  background-color: #ff5635;
+  border-radius: 8px;
+}
+
+.error__button:hover,
+.error__button:focus {
+  opacity: 0.8;
+}
+
+.error__button:focus {
+  outline: none;
+}
+
+.error__button:active {
+  outline: none;
+  opacity: 0.6;
+}

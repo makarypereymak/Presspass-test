@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Находка 2030</title>
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a href="#">
+          <img class="page-header__logo" src="img/header-logo.svg" width="152" height="40" alt="Логотип сайта.">
+        </a>
+        <button class="page-header__nav-button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+      <nav class="page-header__nav">
+        <ul class="page-header__list">
+          <li class="page-header__item">
+            <a class="page-header__link" href="#">
+              О Находке
+            </a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#">
+              Пройдите опрос
+            </a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#">
+              Проекты Находки
+            </a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#">
+              Обсуждения
+            </a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#">
+              Новости
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <a class="page-main__navigation__link" href="#">
+        Назад
+      </a>
+      <h1 class="page-main__title">
+        Поделитесь идеей
+      </h1>
+      <form class="form" method="post" action="multipart/form-data" autocomplete="off" id="form">
+        <fieldset class="form__fieldset ad-form__element">
+          <legend class="form__fieldset-title">
+            <span>1</span>Расскажите кем вы приходитесь городу
+          </legend>
+          <label class="form__label" >Местный житель
+            <input class="form__radio" type="radio" value="Местный житель" name="character" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label" >Гость города
+            <input class="form__radio" type="radio" value="Гость города" name="character" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+        </fieldset>
+        <fieldset class="form__fieldset ad-form__element">
+          <legend class="form__fieldset-title">
+            <span>2</span>Ваш возраст
+          </legend>
+          <label class="form__label" >До 18
+            <input class="form__radio" type="radio" value="меньше 18" name="age" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label" >19-25
+            <input class="form__radio" type="radio" value="19-25" name="age" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label" >26-35
+            <input class="form__radio" type="radio" value="26-35" name="age" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label" >36-45
+            <input class="form__radio" type="radio" value="36-45" name="age" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label">46-55
+            <input class="form__radio" type="radio" value="45-45" name="age" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label" >56-65
+            <input class="form__radio" type="radio" value="56-65" name="age" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label" >Больше 66
+            <input class="form__radio" type="radio" value="больше 66" name="age" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+        </fieldset>
+        <fieldset class="form__fieldset ad-form__element">
+          <legend class="form__fieldset-title">
+            <span>3</span> Вы хотите рассказать
+          </legend>
+          <label class="form__label">О проблеме и ее решении
+            <input class="form__radio" type="radio" value="о проблеме" name="topic" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label">О идее города
+            <input class="form__radio" type="radio" value="о идеи" name="topic" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label">Об уникальных интересных <br> местах Находки
+            <input class="form__radio" type="radio" value="о местах" name="topic" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__fieldset-title">
+            <span>4</span> Загрузите картинку и укажите место на карте
+          </legend>
+          <div class="form__fieldset-wrapper">
+            <label class="form__label form__label--for-geo ad-form__element" for="input-geo">
+              Указать геолокацию
+              <input class="visually-hidden form__address-input" type="text" id="input-geo" name="image" required data-pristine-required-message="Это поле обязательно для заполнения">
+            </label>
+            <label class="form__label form__label--for-file ad-form__element" for="input-image">
+              Добавить изображение
+              <input class="visually-hidden form__file-input" type="file" id="input-image" name="image" required accept="image/jpeg,image/png,image/gif" data-pristine-required-message="Для отправки формы необходимо прикрепить изображение">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__fieldset-title form__fieldset-title--for-text">
+            <span>5</span> Укажите тему и расскажите идею
+          </legend>
+          <label class="form__label form__label--for-text-input ad-form__element">
+            <input class="form__text form__text--input" id="topic-heading" type="text" name="topic-heading" placeholder="Тема" required data-pristine-required-message="Это поле обязательно для заполнения">
+          </label>
+          <label class="form__label form__label--for-textarea ad-form__element">
+            <textarea class="form__text form__text--textarea" id="topic-text" name="topic-text" placeholder="Идея" required data-pristine-required-message="Это поле обязательно для заполнения"></textarea>
+          </label>
+          <label class="form__label form__label--for-checkbox ad-form__element"> Я согласен <a class="form__personal-data-link" href="#">с политикой обработки персональных данных</a>
+            <input class="form__checkbox" type="checkbox" id="personal-data" name="personal-data" required data-pristine-required-message="Вы должны согласиться с политикой обработки персональных данных">
+          </label>
+        </fieldset>
+        <button class="form__button" type="submit">Отправить</button>
+      </form>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <img class="page-footer__logo" src="img/footer-logo.svg" width="320" height="84" alt="Логотип сайта.">
+        <nav class="page-footer__nav">
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">
+                О находке
+              </a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">
+                Пройдите опрос
+              </a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">
+                План комплексного развития
+              </a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">
+                Обсуждения
+                 </a>
+            </li>
+            <li class="page-footer__item">
+              <a class="page-footer__link" href="#">
+                Новости
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-footer__wrapper-for-lower-text">
+          <a class="page-footer__contact-link" href="call@my-nakhodka.ru">call@my-nakhodka.ru</a>
+          <p class="page-footer__text">Политика обработки персональных данных</p>
+          </div>
+      </div>
+    </footer>
+    <div class="modal modal--for-geo">
+      <div class="modal__wrapper">
+        <div class="modal__map" id="map">
+        </div>
+      </div>
+    </div>
+    <template id="success">
+      <div class="success">
+        <p class="success__message">Форма успешно отправлена</p>
+      </div>
+    </template>
+    <template id="error">
+      <div class="error">
+        <p class="error__message">Ошибка отправки формы</p>
+        <button type="button" class="error__button">Попробовать снова</button>
+      </div>
+    </template>
+    <script src="js/main.js" type="module"></script>
+    <script src="leaflet/leaflet.js"></script>
+    <script src="pristine/pristine.min.js"></script>
+  </body>
+</html>

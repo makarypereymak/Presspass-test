@@ -1,0 +1,40 @@
+.page-main {
+  border-top: 1px solid rgba(179, 197, 210, 0.3);
+  background-color: #F3F7FA;
+}
+
+.page-main__navigation__link {
+  margin-top: 24px;
+  display: block;
+  padding-left: 40px;
+  background-image: url("/img/breadcrumbs_arrow.svg");
+  background-repeat: no-repeat;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #028AF3;
+  background-position: 20px;
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    margin: 32px auto 0 auto;
+  }
+}
+
+.page-main__title {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.87);
+  width: 250px;
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    margin: 59px auto;
+    font-size: 40px;
+    line-height: 48px;
+  }
+}

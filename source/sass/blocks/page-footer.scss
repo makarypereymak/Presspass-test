@@ -1,0 +1,96 @@
+.page-footer {
+  background-color: #F3F7FA;;
+}
+
+.page-footer__wrapper {
+  padding: 30px 20px 64px 20px;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: flex-start;
+    width: 1440px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 123px 112px 64px 112px;
+  }
+}
+
+.page-footer__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-footer__nav {
+  margin-top: 44px;
+  margin-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-right: 103px;
+  }
+}
+
+.page-footer__item {
+  margin-bottom: 32px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 212px;
+  }
+}
+
+.page-footer__link {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+.page-footer__logo {
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  width: 320px;
+  height: 84px;
+
+  @media (min-width: $desktop-width) {
+    width: 376px;
+    height: 100px;
+    margin: 0 144px 0 0 ;
+  }
+}
+
+.page-footer__wrapper::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 320px;
+  background-color: rgba(179, 197, 210, 0.3);
+  top: 1px;
+
+  @media (min-width: $desktop-width) {
+    top: 61px;
+    width: 1216px;
+  }
+}
+
+.page-footer__contact-link {
+  padding-left: 35px;
+  background-image: url("/img/mail-logo.svg");
+  background-repeat: no-repeat;
+  display: block;
+  margin-bottom: 28px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #028AF3;
+}
+
+.page-footer__text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: rgba(0, 0, 0, 0.4)
+}
