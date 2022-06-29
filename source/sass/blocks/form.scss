@@ -124,7 +124,7 @@
   padding-left: 0;
 }
 
-.form__label:not(:last-child) {
+.form__label:not(:last-of-type) {
   margin-bottom: 19px;
 }
 

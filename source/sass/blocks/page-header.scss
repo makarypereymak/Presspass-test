@@ -29,15 +29,24 @@
   }
 }
 
-.page-header__list {
+.page-header__nav--closed {
   display: none;
+}
+
+.page-header__nav--active {
+  display: block;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+.page-header__list {
   flex-direction: column;
   align-items: center;
   padding: 0;
   margin: 0;
   width: 100%;
   list-style-type: none;
-  position: absolute;
   z-index: 3;
 
   @media (min-width: $desktop-width) {

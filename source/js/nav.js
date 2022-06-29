@@ -1,15 +1,13 @@
 const button = document.querySelector(".page-header__nav-button");
-const menu = document.querySelector(".page-header__list");
-const modalGeo = document.querySelector(".modal--for-geo");
+const menu = document.querySelector(".page-header__nav");
 
 button.addEventListener('click', () => {
-  if (menu.style.display === "none") {
-    console.log(1);
-    menu.style.display = "flex";
+
+  if (menu.classList.contains('page-header__nav--closed')) {
+    menu.classList.remove('page-header__nav--closed');
+    menu.classList.add('page-header__nav--active');
   } else {
-    console.log(2);
-    menu.style.display = "none";
+    menu.classList.add('page-header__nav--closed');
+    menu.classList.remove('page-header__nav--active');
   }
 });
-
-export {modalGeo};

@@ -1,5 +1,4 @@
-import { modalGeo } from "./nav.js";
-
+const modalGeo = document.querySelector(".modal--for-geo");
 const addressInput = document.querySelector('.form__address-input');
 const modalWrapper = document.querySelector(".modal__wrapper");
 const labelGeo = document.querySelector(".form__label--for-geo");
